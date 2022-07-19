@@ -362,4 +362,4 @@ public class JavaDemoBot {
 
 42. Expand Lifecycle and doubleclick package.
 
-43. Now you can upload the not original File to the Karlo Hosting Panel.
+43. Now you can upload the not original File in the target folder on the right to the Karlo Hosting Panel.
