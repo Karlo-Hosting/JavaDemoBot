@@ -25,7 +25,7 @@
 
 11. Click Download JDK
 
-12. Select as Vendor Amazon Coretto and as Version the newest version which starts with "11."
+12. Select as Vendor "BellSoft Liberica" and as Version the newest version which starts with "11."
 
 13. Click Download
 
@@ -202,6 +202,164 @@ public class DemoBot {
  
  - Set the status of your bot with ```builder.setStatus(OnlineStatus.ONLINE);``` in the brackets after OnlineStatus you can press Strg + Space again for the options.
  
- - Your bot has to set the intents he will use. So write ```builder.setEnabledIntents(GatewayIntent.MESSAGE_CONTENT);``` for the usage of this Demo Bot.
- 
- - 
+ - *Your bot has to set the intents he will use. So write ```builder.setEnabledIntents(GatewayIntent.MESSAGE_CONTENT);``` for the usage of this Demo Bot.
+
+Those with * are neccessary. In every case you have to import the GatewayIntent, OnlineStatus or the Activity class like descrbed above.
+
+33. Next we will have to build the JDA with ```jda = builder.build();``` so it will look like this
+
+```java
+package com.karlohosting.demobot;
+
+
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
+
+public class DemoBot {
+    JDA jda;
+
+    public DemoBot() {
+        JDABuilder builder = JDABuilder.createLight("TOKEN");
+        builder.setActivity(Activity.playing("on Karlo Hosting."));
+        builder.setStatus(OnlineStatus.DO_NOT_DISTURB);
+        builder.setEnabledIntents(GatewayIntent.MESSAGE_CONTENT);
+        jda = builder.build();
+    }
+
+    public static void main(String[] args) {
+        new DemoBot();
+    }
+}
+
+```
+34. Next we will have to tell JDA our slash command with the following line ```jda.upsertCommand("ping", "Calculate ping of the bot.").queue();``` So your code will look like this
+```java
+package com.karlohosting.demobot;
+
+
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
+
+public class DemoBot {
+    JDA jda;
+
+    public DemoBot() {
+        JDABuilder builder = JDABuilder.createLight("TOKEN");
+        builder.setActivity(Activity.playing("on Karlo Hosting."));
+        builder.setStatus(OnlineStatus.DO_NOT_DISTURB);
+        builder.setEnabledIntents(GatewayIntent.MESSAGE_CONTENT);
+        jda = builder.build();
+        jda.upsertCommand("ping", "Calculate ping of the bot.").queue();
+    }
+
+    public static void main(String[] args) {
+        new DemoBot();
+    }
+}
+```
+35. Create the slash commands class. For the next step create a class like the main but with a name like "PingCommand".
+
+36. In the class write right next to PingCommand ```extends ListenerAdapter``` ,you will have to import the ListenerAdapter like described before. So your code will look like this
+```java
+package com.karlohosting.demo;
+
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+
+public class PingCommand extends ListenerAdapter {
+}
+```
+
+37. Next we will have to put in the slash command. So put the following in the body of the PingCommand.
+```java
+@Override
+    public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
+    }
+```
+You will have to import the SlashcommandInteractionEvent like described before. So your code will look like this.
+```java
+package com.karlohosting.demo;
+
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+
+public class PingCommand extends ListenerAdapter {
+    @Override
+    public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
+    }
+}
+
+```
+
+38. Now we have to put a if clause into the Event body to check if the command is something else than /ping. So put the following in the Events body:
+```if (!event.getName().equals("ping")) return;```
+So your code will look like this:
+```java
+package com.karlohosting.demo;
+
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+
+public class PingCommand extends ListenerAdapter {
+    @Override
+    public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
+        if (!event.getName().equals("ping")) return;
+    }
+}
+```
+39. Next you have to put in the answer, "Pong!" like this:
+```event.reply("Pong!").queue();```
+So your code will look like this.
+```java
+package com.karlohosting.demo;
+
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+
+public class PingCommand extends ListenerAdapter {
+    @Override
+    public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
+        if (!event.getName().equals("ping")) return;
+        event.reply("Pong!").queue();
+    }
+}
+```
+40. Now your command is ready and you only have to register the command in the main. So switch back to your mainclass and put the following under the line where you enable the Intends:
+```builder.addEventListeners(new COMMANDCLASSNAME());```
+You will have to import your command class. So your code will look like this. 
+
+```java
+package com.karlohosting.demo;
+
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.OnlineStatus;
+import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.requests.GatewayIntent;
+
+import javax.security.auth.login.LoginException;
+
+public class JavaDemoBot {
+    JDA jda;
+    public static void main(String[] args) throws LoginException {
+        new JavaDemoBot();
+    }
+    public JavaDemoBot() throws LoginException {
+        JDABuilder builder = JDABuilder.createLight("OTk4ODk2OTk3MjkxNTMyMzE4.GiWrUM.VSuo1UBIV_dJ5xTz73GyVAYOIETCHbC3D-CAtw");
+        builder.setActivity(Activity.playing("on Karlo Hosting."));
+        builder.setStatus(OnlineStatus.DO_NOT_DISTURB);
+        builder.setEnabledIntents(GatewayIntent.MESSAGE_CONTENT);
+        builder.addEventListeners(new PingCommand());
+        jda = builder.build();
+        jda.upsertCommand("ping", "Calculate ping of the bot.").queue();
+    }
+
+}
+```
+
+<h2>Building the .jar File</h2>
+
+41. Next go to the right side of your screen and click "Maven".
+
+42. Expand Lifecycle and doubleclick package.
+
+43. Now you can upload the not original File to the Karlo Hosting Panel.
