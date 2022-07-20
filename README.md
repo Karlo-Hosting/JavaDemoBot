@@ -20,12 +20,10 @@
 
 <h2>Coding</h2>
 1. Use Maven or gradel to install the libraries.
-**Here is a link:**
+
 
 [ ![maven-central][] ](https://mvnrepository.com/artifact/net.dv8tion/JDA/latest)
-[ ![jitpack][] ](https://jitpack.io/#DV8FromtheWorld/JDA
-
-2. Be sure to replace the **VERSION** key below with the one of the versions shown above!
+2. Be sure to replace the **VERSION** key below with the version shown above!
 
 **Maven**
 ```xml
