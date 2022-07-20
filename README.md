@@ -13,7 +13,32 @@
 
 <h2>Coding</h2>
 1. Use Maven or gradel to install the libraries.
-2. ```groovy
+**Maven**
+```xml
+<dependency>
+    <groupId>net.dv8tion</groupId>
+    <artifactId>JDA</artifactId>
+    <version>VERSION</version>
+</dependency>
+```
+
+**Maven without Audio**
+```xml
+<dependency>
+    <groupId>net.dv8tion</groupId>
+    <artifactId>JDA</artifactId>
+    <version>VERSION</version>
+    <exclusions>
+        <exclusion>
+            <groupId>club.minnced</groupId>
+            <artifactId>opus-java</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+```
+
+**Gradle**
+```gradle
 repositories {
     mavenCentral()
 }
@@ -21,7 +46,18 @@ repositories {
 dependencies {
     //Change 'implementation' to 'compile' in old Gradle versions
     implementation("net.dv8tion:JDA:VERSION")
-}```
+}
+```
+
+**Gradle without Audio**
+```gradle
+dependencies {
+    //Change 'implementation' to 'compile' in old Gradle versions
+    implementation("net.dv8tion:JDA:VERSION") {
+        exclude module: 'opus-java'
+    }
+}
+```
 
 24. Go back to the Java Class in my case the "DemoBot" you should see something like this:
 ```java
