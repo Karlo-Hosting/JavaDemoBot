@@ -21,8 +21,8 @@ repositories {
 dependencies {
     //Change 'implementation' to 'compile' in old Gradle versions
     implementation("net.dv8tion:JDA:VERSION")
-}
-```
+}```
+
 24. Go back to the Java Class in my case the "DemoBot" you should see something like this:
 ```java
 package com.karlohosting.demobot;
