@@ -17,7 +17,9 @@
 <h2>Coding</h2>
 1. Use Maven or gradel to install the libraries.
 **Here is a link:**
+
 [Link](https://github.com/)
+
 2. Be sure to replace the **VERSION** key below with the one of the versions shown above!
 
 **Maven**
