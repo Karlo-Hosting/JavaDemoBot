@@ -1,9 +1,8 @@
-[maven-central]: https://img.shields.io/maven-central/v/net.dv8tion/JDA?color=blue
 # JavaDemoBot | How to create an Java Discord Bot with JDA 
 # This guide uses Maven and IntelliJ.
 
 <h2>Installing</h2>
-1. Download an IDE of your choice, preferably IntelliJ (https://www.jetbrains.com/idea/download)
+1. Download an IDE of your choice, preferably IntelliJ [Yes](https://www.jetbrains.com/idea/download)
 2. Finish installing the programme to your pc and open it when you are done.
 
 <h2>Configuring</h2>
