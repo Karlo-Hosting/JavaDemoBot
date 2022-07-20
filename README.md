@@ -7,9 +7,12 @@
 
 <h2>Configuring</h2>
 1. Make sure you have java set up on your device. If you don't, donload it here (https://www.oracle.com/java/technologies/downloads/archive/)
-2. Create a new project, select your build system, maven is recommended.
-3. Select the correct JDK version for your project.
-4. And click create. 
+
+3. Create a new project, select your build system, maven is recommended.
+
+5. Select the correct JDK version for your project.
+6. yes
+7. And click create. 
 
 <h2>Coding</h2>
 1. Use Maven or gradel to install the libraries.
