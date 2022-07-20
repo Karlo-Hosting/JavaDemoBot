@@ -13,12 +13,8 @@
 
 <h2>Coding</h2>
 1. Use Maven or gradel to install the libraries.
-<br>
-![https://github.com/Karlo-Hosting/JavaDemoBot](https://img.shields.io/maven-central/v/net.dv8tion/JDA?color=blue)
-<br>Latest Release: [GitHub Release](https://github.com/DV8FromTheWorld/JDA/releases/latest) 
-<br>
-<p>[I'm an inline-style link](https://www.google.com)</p>
-_Please see the [Discord docs](https://discord.com/developers/docs/reference) for more information about bot accounts._
+**Here is a link:**
+[Link](https://github.com/)
 
 2. Be sure to replace the **VERSION** key below with the one of the versions shown above!
 
