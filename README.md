@@ -13,7 +13,7 @@
 
 <h2>Coding</h2>
 1. Use Maven or gradel to install the libraries.
-2. 
+
 **Maven**
 ```xml
 <dependency>
