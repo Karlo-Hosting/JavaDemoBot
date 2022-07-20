@@ -17,7 +17,7 @@
 ![https://github.com/Karlo-Hosting/JavaDemoBot](https://img.shields.io/maven-central/v/net.dv8tion/JDA?color=blue)
 <br>Latest Release: [GitHub Release](https://github.com/DV8FromTheWorld/JDA/releases/latest) 
 <br>
-1 [I'm an inline-style link](https://www.google.com)
+<p>[I'm an inline-style link](https://www.google.com)</p>
 
 2. Be sure to replace the **VERSION** key below with the one of the versions shown above!
 
