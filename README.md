@@ -15,7 +15,7 @@
 <h2>Coding</h2>
 1. Use Maven or gradel to install the libraries.
 
-https://img.shields.io/maven-central/v/net.dv8tion/JDA?color=blue
+![Text](https://img.shields.io/maven-central/v/net.dv8tion/JDA?color=blue)
 [https://img.shields.io/maven-central/v/net.dv8tion/JDA?color=blue]
 Latest Release: [GitHub Release](https://github.com/DV8FromTheWorld/JDA/releases/latest) <br>
 
