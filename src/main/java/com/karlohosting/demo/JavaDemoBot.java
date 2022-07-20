@@ -15,6 +15,7 @@ public class JavaDemoBot {
     }
     public JavaDemoBot() throws LoginException {
         JDABuilder builder = JDABuilder.createLight("OTk4ODk2OTk3MjkxNTMyMzE4.GiWrUM.VSuo1UBIV_dJ5xTz73GyVAYOIETCHbC3D-CAtw");
+        //This token is an example Token
         builder.setActivity(Activity.playing("on Karlo Hosting."));
         builder.setStatus(OnlineStatus.DO_NOT_DISTURB);
         builder.addEventListeners(new DemoCommand());
