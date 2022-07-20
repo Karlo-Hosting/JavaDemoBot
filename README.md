@@ -136,7 +136,7 @@ public class DemoBot {
 ```
 <em>Here you are creating an variable for the Connection to the Discord API</em>
 
-26. Press emter and write main and press enter to use the suggestion. Now it should look like this:
+26. Press enter and write main and press enter to use the suggestion. Now it should look like this:
 ```java
   package com.karlohosting.demobot;
 
