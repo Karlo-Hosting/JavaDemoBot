@@ -1,3 +1,4 @@
+[maven-central]: https://img.shields.io/maven-central/v/net.dv8tion/JDA?color=blue
 # JavaDemoBot | How to create an Java Discord Bot with JDA 
 # This guide uses Maven and IntelliJ.
 
