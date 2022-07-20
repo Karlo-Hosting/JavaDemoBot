@@ -1,21 +1,8 @@
 # JavaDemoBot | How to create an Java Discord Bot with JDA
 <h2>Installing</h2>
 
-1. Install IntelliJ IDEA Community (https://www.jetbrains.com/de-de/idea/download/)
-
+1. Download an IDE of your choice, preferably IntelliJ (https://www.jetbrains.com/idea/download)
 2. Run the dowloaded .exe file
-
-3. Accept the windows defender popup
-
-4. Click Next (and select your Install Folder) or let it like the default
-
-5. Enable the Options you like (in my case Desktop Shortcut)
-
-6. Click Install 
-
-7. After the installing check the Start check box and click Finish.
-
-8. Click confirm and continue
 
 <h2>Configuring</h2>
 
