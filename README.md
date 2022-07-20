@@ -2,7 +2,7 @@
 # This guide uses Maven and IntelliJ.
 
 <h2>Installing</h2>
-1. Download an IDE of your choice, preferably IntelliJ [Yes](https://www.jetbrains.com/idea/download)
+1. Download an IDE of your choice, preferably IntelliJ (https://www.jetbrains.com/idea/download)
 2. Finish installing the programme to your pc and open it when you are done.
 
 <h2>Configuring</h2>
@@ -13,7 +13,7 @@
 
 <h2>Coding</h2>
 1. Use Maven or gradel to install the libraries.
-**Here is a link:**<br>
+**Here is a link:**
 [Link](https://github.com/)
 
 2. Be sure to replace the **VERSION** key below with the one of the versions shown above!
