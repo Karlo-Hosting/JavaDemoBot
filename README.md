@@ -18,6 +18,7 @@
 <br>Latest Release: [GitHub Release](https://github.com/DV8FromTheWorld/JDA/releases/latest) 
 <br>
 <p>[I'm an inline-style link](https://www.google.com)</p>
+_Please see the [Discord docs](https://discord.com/developers/docs/reference) for more information about bot accounts._
 
 2. Be sure to replace the **VERSION** key below with the one of the versions shown above!
 
