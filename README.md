@@ -3,6 +3,7 @@
 # This guide uses Maven and IntelliJ.
 
 <h2>Installing</h2>
+[Install](#Installing)
 
 1. Download an IDE of your choice, preferably IntelliJ you can download it [here](https://www.jetbrains.com/idea/download).
 
