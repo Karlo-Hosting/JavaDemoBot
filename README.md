@@ -13,6 +13,7 @@
 
 <h2>Coding</h2>
 1. Use Maven or gradel to install the libraries.
+2. 
 **Maven**
 ```xml
 <dependency>
@@ -59,7 +60,7 @@ dependencies {
 }
 ```
 
-24. Go back to the Java Class in my case the "DemoBot" you should see something like this:
+2. Go back to the Java Class in my case the "DemoBot" you should see something like this:
 ```java
 package com.karlohosting.demobot;
 
