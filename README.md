@@ -3,7 +3,6 @@
 # This guide uses Maven and IntelliJ.
 
 <h2>Installing</h2>
-[Install](#Installing)
 
 1. Download an IDE of your choice, preferably IntelliJ you can download it [here](https://www.jetbrains.com/idea/download).
 
@@ -17,13 +16,14 @@
 
 5. Select the correct JDK version for your project.
 
-7. And click create. 
+7. When you are done click create. 
 
-<h2>Coding</h2>
+<h2>Library set up</h2>
+
 1. Use Maven or gradel to install the libraries.
 
-
 [ ![maven-central][] ](https://mvnrepository.com/artifact/net.dv8tion/JDA/latest)
+
 2. Be sure to replace the **VERSION** key below with the version shown above!
 
 **Maven**
