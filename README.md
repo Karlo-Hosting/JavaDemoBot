@@ -9,6 +9,8 @@
 
 [Library set up](#library-set-up)
 
+[Example Bot](#example-bot)
+
 
 # Installation
 
@@ -79,6 +81,8 @@ dependencies {
     }
 }
 ```
+
+# Example Bot
 
 2. Go back to the Java Class in my case the "DemoBot" you should see something like this:
 ```java
