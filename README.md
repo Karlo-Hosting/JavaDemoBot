@@ -118,6 +118,31 @@ public class DemoBot {
     }
 }
 ```
+» Now make a new class in the same folder. This will be used to listen for events.
+```java
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import org.jetbrains.annotations.NotNull;
+
+public class DemoCommand extends ListenerAdapter {
+    //Text Command
+    @Override
+    public void onMessageReceived(@NotNull MessageReceivedEvent event) {
+        if(event.getMessage().equals("ping")){
+            event.getChannel().sendMessage("pong!").queue();
+        }
+    }
+    
+    //Slash Command
+    @Override
+    public void onSlashCommandInteraction(@NotNull SlashCommandInteractionEvent event) {
+        if(event.getName().equals("png")){
+            event.reply("pong!").queue();
+        }
+    }
+}
+```
 3.  
 
 <h2>Building the .jar File</h2>
