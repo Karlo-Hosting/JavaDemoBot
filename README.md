@@ -13,6 +13,8 @@
 
 5. [Building the .jar with Maven only!](#building-the-jar)
 
+6. [Useful links](#useful-links)
+
 
 # Installation
 
@@ -175,8 +177,43 @@ public class DemoBot {
 ```
 # Building the jar
 
-Next go to the right side of your screen and click "Maven".
+» Add this to your pom.xml
+```xml
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <shadedArtifactAttached>true</shadedArtifactAttached>
+                            <transformers>
+                                <transformer implementation=
+                                                     "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>Replace this with your main class e.g DemoBot</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+```
 
-Expand Lifecycle and doubleclick package.
+» Next go to the right side of your screen and click "Maven".
 
-Now you can upload the not original File in the target folder on the right to the Karlo Hosting Panel.
+» Expand Lifecycle and doubleclick package.
+
+» The file will be compiled to /target in your project folder.
+
+» Now you can upload the file that contains "shaded" the Karlo Hosting Panel.
+
+# Useful links
+ » [JDA github](https://github.com/DV8FromTheWorld/JDA)
+ » [JDA Docs]
