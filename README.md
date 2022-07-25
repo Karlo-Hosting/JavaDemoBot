@@ -2,6 +2,7 @@
 # JavaDemoBot | How to create an Java Discord Bot with JDA 
 # This guide uses Maven and IntelliJ.
 <h2>Summary</h2>
+
 [Installation](#installation)
 
 #Installation
