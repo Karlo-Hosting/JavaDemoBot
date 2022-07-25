@@ -179,7 +179,7 @@ public class DemoBot {
 
 » Add this to your pom.xml
 ```xml
-<build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -195,7 +195,7 @@ public class DemoBot {
                             <transformers>
                                 <transformer implementation=
                                                      "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>Replace this with your main class e.g DemoBot</mainClass>
+                                    <mainClass>Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -215,5 +215,10 @@ public class DemoBot {
 » Now you can upload the file that contains "shaded" the Karlo Hosting Panel.
 
 # Useful links
- » [JDA github](https://github.com/DV8FromTheWorld/JDA)
- » [JDA Docs]
+» [JDA Github](https://github.com/DV8FromTheWorld/JDA)
+
+» [JDA Github Wiki](https://github.com/DV8FromTheWorld/JDA/wiki)
+ 
+» [JDA Wiki](https://jda.wiki/introduction/jda/)
+ 
+» [JDA Java Docs](https://ci.dv8tion.net/job/JDA5/javadoc/)
