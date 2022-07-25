@@ -6,7 +6,8 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 public class DemoCommand extends ListenerAdapter {
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
-        if (!event.getName().equals("ping")) return;
-        event.reply("Pong!").queue();
+        if(event.getName().equals("ping")) {
+            event.reply("pong!").queue();
+        }
     }
 }
