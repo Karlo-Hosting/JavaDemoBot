@@ -95,7 +95,29 @@ public class DemoBot {
     
 }
 ```
+» Now add this code to the class.
+```java
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.Activity;
+import javax.security.auth.login.LoginException;
 
+public class DemoBot {
+    public static void main(String[] args) {
+        JDA jda = null;
+        //Creates the bot with the bot token and gateway intents.
+        JDABuilder builder = JDABuilder.create("token", GatewayIntents);
+        //Sets the activity of the bot.
+        builder.setActivity(Activity.playing("Demo Bot"));
+        //Registers the bot. 
+        try {
+            jda = builder.build();
+        } catch (LoginException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
 3.  
 
 <h2>Building the .jar File</h2>
