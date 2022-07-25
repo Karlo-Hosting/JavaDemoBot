@@ -11,6 +11,8 @@
 
 4. [Example Bot](#example-bot)
 
+5. [Building the .jar with Maven only!](#building-the-jar)
+
 
 # Installation
 
@@ -171,8 +173,7 @@ public class DemoBot {
 
 }
 ```
-
-<h2>Building the .jar File</h2>
+# Building the jar
 
 Next go to the right side of your screen and click "Maven".
 
