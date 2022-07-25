@@ -18,7 +18,7 @@
 
 # Configuration
 
-1. Make sure you have java set up on your device. If you don't, donload it [here](https://www.oracle.com/java/technologies/downloads/archive/).
+1. Make sure you have java set up on your device. If you don't, download it [here](https://www.oracle.com/java/technologies/downloads/archive/).
 
 3. Create a new project, select your build tool, maven is recommended for this guide.
 
@@ -28,7 +28,7 @@
 
 # Library set up
 
-1. Use Maven or gradel to install the libraries.
+1. Use Maven or Gradle to install the libraries.
 
 [ ![maven-central][] ](https://mvnrepository.com/artifact/net.dv8tion/JDA/latest)
 
