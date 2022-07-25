@@ -4,7 +4,11 @@
 <h2>Summary</h2>
 
 [Installation](#installation)
+
 [Configuration](#configuration)
+
+[Library set up](#library-set-up)
+
 
 # Installation
 
@@ -22,7 +26,7 @@
 
 7. When you are done click create. 
 
-<h2>Library set up</h2>
+# Library set up
 
 1. Use Maven or gradel to install the libraries.
 
