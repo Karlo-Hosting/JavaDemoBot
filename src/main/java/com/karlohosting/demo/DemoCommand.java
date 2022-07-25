@@ -4,7 +4,7 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 public class DemoCommand extends ListenerAdapter {
-    //Text Command
+    //Text Commands
     @Override
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
         if(event.getMessage().equals("ping")){
@@ -12,7 +12,7 @@ public class DemoCommand extends ListenerAdapter {
         }
     }
     
-    //Slash Command
+    //Slash Commands
     @Override
     public void onSlashCommandInteraction(@NotNull SlashCommandInteractionEvent event) {
         if(event.getName().equals("png")){
