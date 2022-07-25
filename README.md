@@ -195,7 +195,7 @@ public class DemoBot {
                             <transformers>
                                 <transformer implementation=
                                                      "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>Main</mainClass>
+                                    <mainClass>Put your main class here e.g DemoBot</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
