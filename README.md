@@ -106,7 +106,7 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import javax.security.auth.login.LoginException;
 
-public class DemoBot {
+public class JavaDemoBot {
     public static void main(String[] args) {
         JDA jda = null;
         //Creates the bot with the bot token and gateway intents.
@@ -149,30 +149,21 @@ public class DemoCommand extends ListenerAdapter {
 ```
 » To register the events go back to your main class and replace the code with this.
 ```java
-import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.entities.Activity;
-import net.dv8tion.jda.api.interactions.commands.build.Commands;
-
-import javax.security.auth.login.LoginException;
-
-public class DemoBot {
-    public static void main(String[] args) throws InterruptedException {
-        JDA jda = null;
-        JDABuilder builder = JDABuilder.create("token", GatewayIntents);
-        builder.setActivity(Activity.playing("Demo Bot"));
         //Adds the classes that will listen for events.
+        //Add this before you try build the builder.
         builder.addEventListeners(new DemoComnmands());
+        
+        //Put the new code above or below this.
         try {
             jda = builder.build();
         } catch (LoginException e) {
             e.printStackTrace();
         }
+        
         //Waits until the bot is done loading then uploads the commands.
         jda.awaitReady();
         jda.upsertCommand(Commands.slash("ping","pong!")).queue();
     }
-
 }
 ```
 # Building the jar
@@ -195,7 +186,7 @@ public class DemoBot {
                             <transformers>
                                 <transformer implementation=
                                                      "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>Put your main class here e.g DemoBot</mainClass>
+                                    <mainClass>Put your main class here e.g JavaDemoBot</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
